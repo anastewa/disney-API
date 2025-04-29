@@ -50,7 +50,6 @@ async function searchCharacter(name) {
   }
 }
 
-
 // получение рандомного персонажа 
 async function getRandomCharacter() {
   const allCharacters = await fetchAllCharacters(); // загрузить всех персонажей
@@ -59,8 +58,6 @@ async function getRandomCharacter() {
   renderCharacters([randomCharacter]); // показать его
 }
 
-
-
 // загрузить всех персонажей одной страницей для  фильтрации
 async function fetchAllCharacters() {
   const res = await fetch(`${apiURL}?pageSize=500`); // загрузим много сразу
@@ -68,7 +65,6 @@ async function fetchAllCharacters() {
   return data.data; // вернём массив персонажей
 }
 
-// фильтрация по выбранной категории
 // фильтрация по выбранной категории
 async function filterByCategory(category) {
   const allCharacters = await fetchAllCharacters(); // загружаем всех один раз
@@ -103,13 +99,6 @@ function showMessage(message) {
   listContainer.innerHTML = `
     <div class="message">${message}</div>
   `;
-}
-
-// функция для загрузки всех персонажей
-async function fetchAllCharacters() {
-  const res = await fetch(`${apiURL}?pageSize=500`); // загружаем много сразу
-  const data = await res.json();
-  return data.data; // возвращаем массив персонажей
 }
 
 // событие: клик по кнопке поиска
