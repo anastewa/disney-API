@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disney Characters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Disney Characters</h1>
+    <input type="text" id="searchInput" placeholder="Поиск по имени...">
+    <button id="searchBtn">Поиск</button>
+    <button id="randomBtn">Рандом</button>
+
+  </header>
+
+  <div class="container">
+
+  <aside>
+    <h3>Категории</h3>
+    <ul id="categories">
+      <li data-category="princesses">Принцессы</li>
+      <li data-category="animals">Животные</li>
+      <li data-category="magic">Магические</li>
+      <li data-category="fav">Мои любимчики</li>
+    </ul>
+  </aside>
+
+  <main>
+    <div id="characterList"></div>
+    <div class="pagination">
+      <button id="prevPage">Назад</button>
+      <span id="pageNum">1</span>
+      <button id="nextPage">Вперёд</button>
+    </div>
+  </main>
+
+</div> 
+
+  <script src="scrip.js"></script>
+</body>
+</html>

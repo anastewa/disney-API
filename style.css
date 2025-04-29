@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-direction: column; /* теперь всё идёт сверху вниз */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh; /* чтобы занять всю высоту экрана */
+  }
+  
+  header {
+    background: #e277d0;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .container {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* боковая панель */
+  aside {
+    width: 200px;
+    background: #c682de;
+    padding: 20px;
+  }
+  
+  /* основная часть */
+  main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* список карточек */
+  #characterList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* чтобы карточки были по центру */
+  }
+  
+  /* карточка персонажа */
+  .character-card {
+    width: 150px;
+    border: 1px solid #e9e962;
+    padding: 10px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* картинка в карточке */
+  .character-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* блок пагинации */
+  .pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* центрируем кнопки */
+    align-items: center;
+    gap: 10px;
+  }
+
+  
+  /* стили для списка категорий */
+#categories {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #categories li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f1f1f1; /* обычный серенький фон */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* плавное изменение */
+    cursor: pointer; /* чтобы курсор был как рука */
+  }
+  
+  /* эффект при наведении */
+  #categories li:hover {
+    background-color: #d8e287; /* фон при наведении */
+    color: white; /* белый текст при наведении */
+  }
+  
+  
